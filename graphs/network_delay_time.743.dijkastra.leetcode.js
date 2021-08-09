@@ -1,19 +1,16 @@
+// You are given a network of n nodes, labeled from 1 to n. 
+// You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), 
+// where ui is the source node, vi is the target node, 
+// and wi is the time it takes for a signal to travel from source to target.
 
-// There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. 
-// You are given an array prerequisites where prerequisites[i] = [ai, bi] 
-// indicates that you must take course bi first if you want to take course ai.
+// We will send a signal from a given node k. 
+// Return the time it takes for all the n nodes to receive the signal. 
+// If it is impossible for all the n nodes to receive the signal, return -1.
 
-// For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
-// Return true if you can finish all courses. Otherwise, return false.
 
-// Example 2:
-// Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
-// Output: false
-// Explanation: There are a total of 2 courses to take. 
-// To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. 
-// So it is impossible.
+//Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
+//Output: 2
 
-// ================================================ solution ========================================================
 
 // Priority Queue implementation
 class PriorityQueue {
