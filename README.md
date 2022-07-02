@@ -8,7 +8,7 @@ This is the shared practice document for interview prepration. It covers popular
 
 ## Example
 for file [two_sum1.leetcode.js] : It represents problem number 1 of leetcode whose name is two_sum.
-for other platform like `HackerRank` and `Codility` numers may not be there in the file names.
+for other platform like `HackerRank` and `Codility` numbers may not be there in the file names.
 
 1) `cd` into the current folder (ex. array)
 2) Then run: node two_sum1.leetcode.js
