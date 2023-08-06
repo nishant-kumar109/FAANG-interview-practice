@@ -25,14 +25,6 @@ console.log(getSearchArray("What is a CVV code?"))
 console.log(getSearchArray("The amount was debited, but I haven’t received a confirmation email/SM…"))
 console.log(getSearchArray("Why is my payment not going through?"))
 
-// const schema = new Schema(
-//     {
-//       name: String,
-//       _nameSearch: { type: [String], index: true },
-//     }
-//   );
-// db.collection.find({ _nameSearch: SEARCH_STRING });
-
 
 
 
