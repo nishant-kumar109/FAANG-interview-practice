@@ -27,7 +27,8 @@ class WordCloudData {
     for (let i = 0; i < inputStringArray.length; i++) {
       let inputStringValue = 0;
       inputStringArray[i] = (inputStringArray[i][inputStringArray[i].length-1].toUpperCase() !== 
-      inputStringArray[i][inputStringArray[i].length-1].toLowerCase()) ?  inputStringArray[i] : inputStringArray[i].slice(0,inputStringArray[i].length-1);
+      inputStringArray[i][inputStringArray[i].length-1].toLowerCase()) ?  inputStringArray[i] : 
+      inputStringArray[i].slice(0,inputStringArray[i].length-1);
      
       if (this.wordsToCounts.has(inputStringArray[i])) {
         inputStringValue = this.wordsToCounts.get(inputStringArray[i]);
