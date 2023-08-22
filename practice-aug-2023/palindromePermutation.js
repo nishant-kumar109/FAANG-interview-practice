@@ -1,23 +1,31 @@
 
 // Check if any permutation of the input is a palindrome
 function hasPalindromePermutation(theString) {
-    const palindromeMap = {};
-    let residualCount = 0; 
-    for (let i = 0; i < theString.length; i++) {
-      if (palindromeMap[theString[i]]) {
-        palindromeMap[theString[i]] = palindromeMap[theString[i]]-1;
-        residualCount--;
-      }else{
-        palindromeMap[theString[i]] = 1;
-        residualCount++;
-      }
-      
+  const palindromeMap = {};
+  let residualCount = 0;
+  for (let i = 0; i < theString.length; i++) {
+    if (palindromeMap[theString[i]]) {
+      palindromeMap[theString[i]] = palindromeMap[theString[i]] - 1;
+      residualCount--;
+    } else {
+      palindromeMap[theString[i]] = 1;
+      residualCount++;
     }
-
-    return (residualCount === 0 || residualCount === 1)
   }
+  return residualCount === 0 || residualCount === 1;
+}
   
-  
+  function hasPalindromePermutation(theString) {
+    const palindromeSet = new Set();
+    for (let i = 0; i < theString.length; i++) {
+      if (palindromeSet.has(theString[i])) {
+        palindromeSet.delete(theString[i]);
+      } else {
+        palindromeSet.add(theString[i]);
+      }
+    }
+    return palindromeSet.size === 0 || palindromeSet.size === 1;
+  }
   // Tests
   
   let desc = 'permutation with odd number of chars';
