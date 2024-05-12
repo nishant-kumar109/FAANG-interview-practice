@@ -16,7 +16,7 @@
 // We won't, mainly because performance is difficult to measure and can get pretty bad.
 
 class WordCloudData {
-  constructor(inputString) {
+  constructor(inputString) { 
     this.wordsToCounts = new Map();
     this.populateWordsToCounts(inputString);
   }
