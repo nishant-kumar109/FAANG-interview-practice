@@ -75,3 +75,13 @@ function assertEquals(a, b, desc) {
     console.log(`${desc} ... FAIL: ${a} != ${b}`);
   }
 }
+
+movies = [
+  "Inception",
+  "Interstellar",
+  "Joker",
+  "Zodiac", // <-- Rotation happens here!
+  "Avatar",
+  "Batman Begins",
+  "Titanic"
+];

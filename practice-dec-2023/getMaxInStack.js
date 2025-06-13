@@ -36,13 +36,13 @@ class Stack {
     }
 }
 
-// class MaxStack {
-//     constructor() {
-//       this.items = [];
-//     }
+class MaxStack {
+    constructor() {
+      this.items = [];
+    }
 
 
-// }
+}
 result = -Infinity
 origionalStack = [3,5,9,10,6,8]
 
