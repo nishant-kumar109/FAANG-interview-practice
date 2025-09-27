@@ -1,4 +1,4 @@
-                // o1    o2   o3  o4   o5   o6
+// o1    o2   o3  o4   o5   o6
 // let loadsArr = [600, 300, 200, 700, 500, 500 ];
 
 // application_servers = loadsArr.length/2;
@@ -6,33 +6,16 @@
 // workers/application_servers : APS1, APS2, APS3
 
 function assignRequestsToServers(requests) {
-  requests.sort((a, b) => a - b); // Sort ascending
+  requests.sort((a, b) => a - b);
   const result = [];
   let i = 0, j = requests.length - 1;
 
   while (i < j) {
-    result.push([requests[i], requests[j]]);
-    i++;
-    j--;
+    result.push([requests[i++], requests[j--]]);
   }
 
   if (i === j) {
-    if (result.length === 0) {
-      // Only one request, put it in its own array
-      result.push([requests[i]]);
-    } else {
-      // Find the server (pair) with the lowest total load
-      let minLoad = Infinity;
-      let minIndex = -1;
-      for (let k = 0; k < result.length; k++) {
-        const load = result[k].reduce((a, b) => a + b, 0);
-        if (load < minLoad) {
-          minLoad = load;
-          minIndex = k;
-        }
-      }
-      result[minIndex].push(requests[i]);
-    }
+    result.push([requests[i]]);
   }
 
   return result;
